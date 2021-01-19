@@ -22,8 +22,7 @@ let response = await fetch(`https://api.github.com/users/${username}`)
 
 const data =await response.json()
 
-const follow = data.following
-
+const follow = data.followingd
 
 // set data to redis
 client.setex(username,3600,follow)
